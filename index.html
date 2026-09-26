@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abinav G — AI & Data Science Portfolio</title>
+  <meta name="description" content="Abinav G — AI & Data Science Undergraduate, ML Practitioner specializing in Machine Learning, Deep Learning, NLP, and Computer Vision." />
+  <meta property="og:title" content="Abinav G — AI & Data Science Portfolio" />
+  <meta property="og:description" content="ML Practitioner | Deep Learning | NLP | Computer Vision" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Floating Geometric Background -->
+  <canvas id="geo-canvas" aria-hidden="true"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>AG<span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+      <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+      <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+      <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+      <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" id="nav-cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Let's Talk
+    </button>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" aria-label="Hero section">
+      <div class="hero-grid">
+        <div class="geo-orb orb-1" aria-hidden="true"></div>
+        <div class="geo-orb orb-2" aria-hidden="true"></div>
+        <div class="geo-orb orb-3" aria-hidden="true"></div>
+        <div class="geo-line line-h" aria-hidden="true"></div>
+        <div class="geo-line line-v" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="tag-dot"></span>
+            Available for Opportunities
+          </div>
+
+          <h1 class="hero-name" id="hero-name">
+            <span class="name-line">Abinav</span>
+            <span class="name-line accent">G.</span>
+          </h1>
+
+          <p class="hero-title">
+            AI &amp; Data Science Undergraduate<br/>
+            <span class="title-accent">&amp; ML Practitioner</span>
+          </p>
+
+          <p class="hero-tagline">
+            Hands-on expertise in <em>Machine Learning</em>, <em>Deep Learning</em>,
+            <em>NLP</em>, and <em>Computer Vision</em> — building systems that perceive,
+            learn, and adapt.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+              <span>View Projects</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-get-in-touch">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="88">0</span><span class="stat-suffix">%</span>
+              <span class="stat-label">Peak ML Accuracy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-bauhaus-card">
+            <div class="bauhaus-circle-lg"></div>
+            <div class="bauhaus-rect"></div>
+            <div class="bauhaus-circle-sm"></div>
+            <div class="bauhaus-tri"></div>
+            <div class="floating-chip chip-1">Random Forest</div>
+            <div class="floating-chip chip-2">TensorFlow</div>
+            <div class="floating-chip chip-3">NLP</div>
+            <div class="floating-chip chip-4">PyTorch</div>
+            <div class="floating-chip chip-5">OpenCV</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-label="Scroll down">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-label="About section">
+      <div class="section-container">
+        <div class="section-label" aria-hidden="true">
+          <span class="label-num">01</span>
+          <span class="label-line"></span>
+          <span class="label-text">About</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <h2 class="section-title">
+              Building at the<br/>
+              <span class="accent">intersection</span><br/>
+              of AI &amp; reality.
+            </h2>
+            <div class="about-bauhaus-block" aria-hidden="true">
+              <div class="ab-circle"></div>
+              <div class="ab-square"></div>
+              <div class="ab-line-h"></div>
+              <div class="ab-line-v"></div>
+            </div>
+          </div>
+
+          <div class="about-right reveal">
+            <p class="about-intro">
+              Hi, I’m <strong>Abinav G</strong>, an <strong>Artificial Intelligence and Data Science undergraduate</strong> at Sri Sairam Institute of Technology, passionate about building practical solutions with <strong>AI, Machine Learning, Data Science, and Generative AI</strong>.
+            </p>
+            <p class="about-body">
+              I enjoy turning real-world problems into intelligent, data-driven applications. My experience includes developing <strong>machine learning models, data preprocessing pipelines, deep learning solutions, NLP applications, and REST APIs</strong> using technologies such as Python, SQL, Scikit-learn, TensorFlow, Pandas, and NumPy.
+            </p>
+            <p class="about-body">
+              Through internships and projects, I have worked on areas ranging from <strong>wildlife conservation and voice assistants to automated waste classification</strong>. Projects like <strong>W.A.T.C.H., A-M-YAI Voice Assistant, and EcoSort AI</strong> have helped me strengthen my ability to combine AI with real-world applications.
+            </p>
+            <p class="about-body">
+              I’m also an active hackathon participant and have earned multiple prizes in <strong>AI/ML, Generative AI, and sustainability-focused competitions</strong>, which has strengthened my problem-solving, teamwork, and rapid prototyping skills.
+            </p>
+            <p class="about-body">
+              Currently, I’m focused on growing as an <strong>AI/ML Engineer and Data Scientist</strong>, while continuously building projects that turn ideas into useful, scalable products.
+            </p>
+
+            <div class="about-tags">
+              <span class="about-tag">Python</span>
+              <span class="about-tag">SQL</span>
+              <span class="about-tag">Scikit-learn</span>
+              <span class="about-tag">TensorFlow</span>
+              <span class="about-tag">Pandas</span>
+              <span class="about-tag">NumPy</span>
+              <span class="about-tag">OCI</span>
+              <span class="about-tag">PyTorch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-label="Experience section">
+      <div class="section-container">
+        <div class="section-label" aria-hidden="true">
+          <span class="label-num">02</span>
+          <span class="label-line"></span>
+          <span class="label-text">Experience</span>
+        </div>
+
+        <h2 class="section-title reveal">Where I've<br/><span class="accent">shipped</span> work.</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item reveal" id="exp-1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="tc-header">
+                <div class="tc-meta">
+                  <span class="tc-date">Sep 2025 – Nov 2025</span>
+                  <span class="tc-badge badge-ml">ML</span>
+                </div>
+                <h3 class="tc-role">Machine Learning Intern</h3>
+                <p class="tc-company">CodTech IT Solutions</p>
+              </div>
+              <div class="tc-body">
+                <p>Developed and tuned <strong>Random Forest</strong> and <strong>XGBoost</strong>
+                  classification models. Applied <strong>GridSearchCV</strong>
+                  hyperparameter optimization, achieving a validation accuracy of <strong class="accent-text">88%</strong>.
+                </p>
+                <div class="tc-pills">
+                  <span>Random Forest</span>
+                  <span>XGBoost</span>
+                  <span>GridSearchCV</span>
+                  <span>Scikit-learn</span>
+                </div>
+              </div>
+              <div class="tc-metric">
+                <div class="metric-bar-wrap">
+                  <div class="metric-label">Validation Accuracy</div>
+                  <div class="metric-bar"><div class="metric-fill" data-width="88"></div></div>
+                  <div class="metric-val">88%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" id="exp-2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="tc-header">
+                <div class="tc-meta">
+                  <span class="tc-date">Jun 2024</span>
+                  <span class="tc-badge badge-ds">DS</span>
+                </div>
+                <h3 class="tc-role">Data Science Intern</h3>
+                <p class="tc-company">Prodigy Infotech</p>
+              </div>
+              <div class="tc-body">
+                <p>Built robust Python preprocessing pipelines using <strong>Pandas</strong> &amp;
+                  <strong>NumPy</strong>. Reduced RMSE by approximately <strong class="accent-text">15%</strong>
+                  through feature engineering and outlier handling.
+                </p>
+                <div class="tc-pills">
+                  <span>Pandas</span>
+                  <span>NumPy</span>
+                  <span>Feature Engineering</span>
+                  <span>Python</span>
+                </div>
+              </div>
+              <div class="tc-metric">
+                <div class="metric-bar-wrap">
+                  <div class="metric-label">RMSE Reduction</div>
+                  <div class="metric-bar"><div class="metric-fill" data-width="15"></div></div>
+                  <div class="metric-val">~15%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" id="exp-3">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="tc-header">
+                <div class="tc-meta">
+                  <span class="tc-date">Dec 2024 – Jan 2025</span>
+                  <span class="tc-badge badge-net">NET</span>
+                </div>
+                <h3 class="tc-role">Networking Intern</h3>
+                <p class="tc-company">Vectra Technosoft Pvt. Ltd.</p>
+              </div>
+              <div class="tc-body">
+                <p>Administered <strong>Linux servers</strong>, managing user permissions,
+                  system configs, and maintenance. Automated health checks via custom
+                  <strong>Bash scripts</strong>, reducing manual monitoring overhead.
+                </p>
+                <div class="tc-pills">
+                  <span>Linux</span>
+                  <span>Bash Scripting</span>
+                  <span>Server Admin</span>
+                  <span>Automation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-label="Projects section">
+      <div class="section-container">
+        <div class="section-label" aria-hidden="true">
+          <span class="label-num">03</span>
+          <span class="label-line"></span>
+          <span class="label-text">Projects</span>
+        </div>
+
+        <div class="projects-header">
+          <h2 class="section-title reveal">Things I've<br/><span class="accent">built</span>.</h2>
+          <p class="projects-sub reveal">
+            Real problems. Real constraints. Real ML engineering.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card reveal featured-card" id="proj-watch" tabindex="0" role="article">
+            <div class="pc-accent-bar"></div>
+            <div class="pc-top">
+              <div class="pc-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="18" stroke="#FF8200" stroke-width="2"/>
+                  <path d="M12 20 C14 14 20 10 26 14 C30 17 30 24 26 27 C22 30 16 28 14 24" stroke="#FF8200" stroke-width="1.5" fill="none"/>
+                  <circle cx="20" cy="20" r="3" fill="#FF8200"/>
+                  <circle cx="20" cy="20" r="6" stroke="#FF8200" stroke-width="1" stroke-dasharray="2 2"/>
+                </svg>
+              </div>
+              <div class="pc-badges">
+                <span class="pc-badge">AI + IoT</span>
+                <span class="pc-badge featured-badge">Featured</span>
+              </div>
+            </div>
+            <h3 class="pc-title">W.A.T.C.H.</h3>
+            <p class="pc-full-name">Wildlife AI Tracking &amp; Conservation Hub</p>
+            <p class="pc-desc">
+              End-to-end AI + IoT pipeline for wildlife movement anomaly detection.
+              Uses a <strong>Random Forest</strong> classifier trained on sensor telemetry
+              to flag unusual patterns and trigger conservation alerts in near real-time.
+            </p>
+            <div class="pc-stack">
+              <span>Random Forest</span>
+              <span>IoT Integration</span>
+              <span>Python</span>
+              <span>Anomaly Detection</span>
+            </div>
+            <div class="pc-footer">
+              <a href="https://github.com/abinav0410" target="_blank" rel="noopener" class="pc-link" id="proj-watch-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+            <div class="pc-hover-gfx" aria-hidden="true">
+              <div class="phg-circle"></div>
+              <div class="phg-dot d1"></div><div class="phg-dot d2"></div><div class="phg-dot d3"></div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" id="proj-amyai" tabindex="0" role="article">
+            <div class="pc-accent-bar"></div>
+            <div class="pc-top">
+              <div class="pc-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="12" width="32" height="16" rx="8" stroke="#FF8200" stroke-width="2"/>
+                  <path d="M10 20 Q13 14 16 20 Q19 26 22 20 Q25 14 28 20" stroke="#FF8200" stroke-width="1.5" fill="none"/>
+                </svg>
+              </div>
+              <div class="pc-badges">
+                <span class="pc-badge">ML</span>
+                <span class="pc-badge">Analytics</span>
+              </div>
+            </div>
+            <h3 class="pc-title">Amy ecommerce consumer behaviour</h3>
+            <p class="pc-full-name">AI-Driven E-Commerce Consumer Behavior Analysis</p>
+            <p class="pc-desc">
+              End-to-end analytics platform using <strong>KMeans clustering</strong> for customer segmentation
+              and <strong>XGBoost</strong> for purchase category prediction. Interactive <strong>Plotly</strong> dashboards
+              surface spending trends, loyalty program impact, and auto-generated business recommendations.
+            </p>
+            <div class="pc-stack">
+              <span>KMeans</span>
+              <span>XGBoost</span>
+              <span>Plotly</span>
+              <span>Scikit-learn</span>
+              <span>Pandas</span>
+            </div>
+            <div class="pc-footer">
+              <a href="https://github.com/abinav0410" target="_blank" rel="noopener" class="pc-link" id="proj-amyai-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+            <div class="pc-hover-gfx" aria-hidden="true">
+              <div class="phg-circle"></div>
+              <div class="phg-dot d1"></div><div class="phg-dot d2"></div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" id="proj-ecosort" tabindex="0" role="article">
+            <div class="pc-accent-bar"></div>
+            <div class="pc-top">
+              <div class="pc-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="20,4 36,32 4,32" stroke="#FF8200" stroke-width="2" fill="none"/>
+                  <polygon points="20,12 30,28 10,28" stroke="#FF8200" stroke-width="1" fill="none"/>
+                  <circle cx="20" cy="22" r="3" fill="#FF8200"/>
+                </svg>
+              </div>
+              <div class="pc-badges">
+                <span class="pc-badge">Computer Vision</span>
+                <span class="pc-badge">Edge AI</span>
+              </div>
+            </div>
+            <h3 class="pc-title">EcoSort AI</h3>
+            <p class="pc-full-name">Intelligent Waste Classification System</p>
+            <p class="pc-desc">
+              <strong>MobileNet V2</strong> transfer-learning model for automated waste sorting,
+              optimized for edge deployment via <strong>quantization</strong> and
+              <strong>layer pruning</strong> — high accuracy at minimal inference cost.
+            </p>
+            <div class="pc-stack">
+              <span>MobileNet V2</span>
+              <span>Transfer Learning</span>
+              <span>Quantization</span>
+              <span>Pruning</span>
+              <span>TensorFlow</span>
+            </div>
+            <div class="pc-footer">
+              <a href="https://github.com/abinav0410" target="_blank" rel="noopener" class="pc-link" id="proj-ecosort-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+            <div class="pc-hover-gfx" aria-hidden="true">
+              <div class="phg-circle"></div>
+              <div class="phg-dot d1"></div><div class="phg-dot d2"></div><div class="phg-dot d3"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-label="Skills and achievements section">
+      <div class="section-container">
+        <div class="section-label" aria-hidden="true">
+          <span class="label-num">04</span>
+          <span class="label-line"></span>
+          <span class="label-text">Skills &amp; Achievements</span>
+        </div>
+
+        <h2 class="section-title reveal">The full<br/><span class="accent">stack</span>.</h2>
+
+        <div class="skills-matrix">
+
+          <div class="skill-category reveal" id="sk-languages">
+            <div class="sk-header">
+              <div class="sk-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF8200" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Languages</h3>
+            </div>
+            <div class="sk-pills">
+              <span class="sk-pill level-3">Python</span>
+              <span class="sk-pill level-3">SQL</span>
+              <span class="sk-pill level-2">Bash</span>
+              <span class="sk-pill level-2">C</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="sk-ml">
+            <div class="sk-header">
+              <div class="sk-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF8200" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <h3>Machine Learning</h3>
+            </div>
+            <div class="sk-pills">
+              <span class="sk-pill level-3">Scikit-learn</span>
+              <span class="sk-pill level-3">XGBoost</span>
+              <span class="sk-pill level-3">Random Forest</span>
+              <span class="sk-pill level-2">GridSearchCV</span>
+              <span class="sk-pill level-2">Feature Engineering</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="sk-dl">
+            <div class="sk-header">
+              <div class="sk-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF8200" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <h3>Deep Learning</h3>
+            </div>
+            <div class="sk-pills">
+              <span class="sk-pill level-3">TensorFlow</span>
+              <span class="sk-pill level-2">PyTorch</span>
+              <span class="sk-pill level-3">MobileNet V2</span>
+              <span class="sk-pill level-2">Transfer Learning</span>
+              <span class="sk-pill level-2">Quantization</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="sk-nlp">
+            <div class="sk-header">
+              <div class="sk-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF8200" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <h3>NLP / GenAI</h3>
+            </div>
+            <div class="sk-pills">
+              <span class="sk-pill level-3">Transformers</span>
+              <span class="sk-pill level-2">Intent Classification</span>
+              <span class="sk-pill level-2">Emotion AI</span>
+              <span class="sk-pill level-2">Hugging Face</span>
+              <span class="sk-pill level-2">LLM Integration</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="sk-data">
+            <div class="sk-header">
+              <div class="sk-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF8200" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3>Data</h3>
+            </div>
+            <div class="sk-pills">
+              <span class="sk-pill level-3">Pandas</span>
+              <span class="sk-pill level-3">NumPy</span>
+              <span class="sk-pill level-2">Matplotlib</span>
+              <span class="sk-pill level-2">Seaborn</span>
+              <span class="sk-pill level-2">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="sk-cloud">
+            <div class="sk-header">
+              <div class="sk-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF8200" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </div>
+              <h3>Backend / Cloud</h3>
+            </div>
+            <div class="sk-pills">
+              <span class="sk-pill level-2">OCI</span>
+              <span class="sk-pill level-2">Linux</span>
+              <span class="sk-pill level-2">Flask</span>
+              <span class="sk-pill level-2">Git</span>
+              <span class="sk-pill level-2">Docker</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Achievements -->
+        <div class="achievements-section reveal">
+
+          <!-- Hackathons -->
+          <div class="ach-group-label">
+            <span class="ach-group-icon" aria-hidden="true">🏆</span>
+            <span>Hackathon Achievements</span>
+          </div>
+          <div class="achievements-grid">
+            <div class="achievement-card" id="ach-1">
+              <div class="ach-icon" aria-hidden="true">🥇</div>
+              <div class="ach-body">
+                <h4>1st Prize — Kratos Symposium (Gen AI)</h4>
+                <p>Top prize at Kratos Symposium, SRM. Delivered an end-to-end GenAI solution against 400+ competing teams.</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="ach-2">
+              <div class="ach-icon" aria-hidden="true">🥈</div>
+              <div class="ach-body">
+                <h4>2nd Prize — Chakravyuha 1.0 (AI/ML)</h4>
+                <p>Silver podium in an AI/ML focused competitive hackathon, demonstrating applied machine learning under time constraints.</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="ach-3">
+              <div class="ach-icon" aria-hidden="true">🥈</div>
+              <div class="ach-body">
+                <h4>2nd Prize — Solveathon 4.0 (SDG 15)</h4>
+                <p>Runner-up at Solveathon 4.0, building a sustainability-focused tech solution aligned with UN SDG 15 (Life on Land).</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="ach-4">
+              <div class="ach-icon" aria-hidden="true">🥉</div>
+              <div class="ach-body">
+                <h4>3rd Prize — Deep Cortex</h4>
+                <p>Podium finish at Deep Cortex hackathon, showcasing rapid prototyping and deep learning problem-solving.</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="ach-5">
+              <div class="ach-icon" aria-hidden="true">🏅</div>
+              <div class="ach-body">
+                <h4>Top 10 / 400+ Teams — SRM Innofusion</h4>
+                <p>Selected in the top 10 teams out of 400+ participants at SRM Innofusion Hackathon, competing in open innovation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="ach-group-label" style="margin-top: 2.5rem;">
+            <span class="ach-group-icon" aria-hidden="true">📜</span>
+            <span>Certifications</span>
+          </div>
+          <div class="achievements-grid">
+            <div class="achievement-card" id="cert-1">
+              <div class="ach-icon" aria-hidden="true">☁️</div>
+              <div class="ach-body">
+                <h4>OCI AI Foundations Associate</h4>
+                <p>Oracle University — validated expertise in Oracle Cloud Infrastructure AI/ML services and cloud architecture principles.</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="cert-2">
+              <div class="ach-icon" aria-hidden="true">🎓</div>
+              <div class="ach-body">
+                <h4>Red Hat RHCSA</h4>
+                <p>Red Hat Certified System Administrator — enterprise Linux administration, scripting, user management, and system security.</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="cert-3">
+              <div class="ach-icon" aria-hidden="true">📊</div>
+              <div class="ach-body">
+                <h4>Accenture Data Analytics Simulation</h4>
+                <p>Forage (2024) — completed a virtual data analytics program simulating real Accenture client workflows and data storytelling.</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="cert-4">
+              <div class="ach-icon" aria-hidden="true">🌐</div>
+              <div class="ach-body">
+                <h4>Cisco: Introduction to Data Science</h4>
+                <p>Cisco Networking Academy certification covering core data science concepts, tools, and analytical methodologies.</p>
+              </div>
+            </div>
+            <div class="achievement-card" id="cert-5">
+              <div class="ach-icon" aria-hidden="true">📈</div>
+              <div class="ach-body">
+                <h4>GUVI: Big Data Analytics</h4>
+                <p>GUVI certification in Big Data Analytics — covering distributed data processing, analytics pipelines, and large-scale data management.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-label="Contact section">
+      <div class="section-container">
+        <div class="section-label" aria-hidden="true">
+          <span class="label-num">05</span>
+          <span class="label-line"></span>
+          <span class="label-text">Contact</span>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-left reveal">
+            <h2 class="section-title">
+              Let's build<br/>something<br/>
+              <span class="accent">great</span>.
+            </h2>
+            <p class="contact-sub">
+              Open to internship opportunities, research collaborations,
+              and exciting ML engineering roles. Don't be a stranger.
+            </p>
+            <a href="mailto:abinavgirish4@gmail.com" class="contact-email-link" id="contact-email-link">
+              abinavgirish4@gmail.com
+              <span class="email-arrow">→</span>
+            </a>
+          </div>
+
+          <div class="contact-right reveal">
+            <div class="contact-links-grid">
+              <a href="https://github.com/abinav0410" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+                <div class="cc-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </div>
+                <div class="cc-body">
+                  <span class="cc-label">GitHub</span>
+                  <span class="cc-handle">@abinav0410</span>
+                </div>
+                <div class="cc-arrow" aria-hidden="true">↗</div>
+              </a>
+
+              <a href="https://linkedin.com/in/abinav-g" target="_blank" rel="noopener" class="contact-card" id="contact-linkedin">
+                <div class="cc-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div class="cc-body">
+                  <span class="cc-label">LinkedIn</span>
+                  <span class="cc-handle">in/abinav-g</span>
+                </div>
+                <div class="cc-arrow" aria-hidden="true">↗</div>
+              </a>
+
+              <a href="mailto:abinavgirish4@gmail.com" class="contact-card" id="contact-email-card">
+                <div class="cc-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="cc-body">
+                  <span class="cc-label">Email</span>
+                  <span class="cc-handle">abinavgirish4@gmail.com</span>
+                </div>
+                <div class="cc-arrow" aria-hidden="true">↗</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">[AG]</span>
+        <span class="footer-copy">Abinav G &mdash; AI &amp; Data Science &copy; 2026</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-made">Built with geometry &amp; gradients.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
